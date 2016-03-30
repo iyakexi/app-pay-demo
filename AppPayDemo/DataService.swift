@@ -21,7 +21,6 @@ struct DataService {
             switch self {
             case .Purchase:  return "/order/purchase"
             case .WXPayPrePay(let id): return "/wxpay/prepay/\(id)"
-            default: return ""
             }
         }
     }

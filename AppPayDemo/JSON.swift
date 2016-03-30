@@ -137,7 +137,7 @@ enum JSON {
         //println(object.dynamicType)
         //println(object)
         switch object {
-        case let value as NSNull:
+        case _ as NSNull:
             return JSON.JSONNull
         case let value as Bool:
             return JSON.JSONBool(value)
