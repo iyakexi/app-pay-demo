@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B74461911CAB843D0052111D /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B744618E1CAB843D0052111D /* NetworkReachabilityManager.swift */; };
+		B74461921CAB843D0052111D /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B744618F1CAB843D0052111D /* Notifications.swift */; };
+		B74461931CAB843D0052111D /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74461901CAB843D0052111D /* Timeline.swift */; };
 		F60D6C801C5B3ADF00E4A41D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60D6C7F1C5B3ADF00E4A41D /* AppDelegate.swift */; };
 		F60D6C851C5B3ADF00E4A41D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F60D6C831C5B3ADF00E4A41D /* Main.storyboard */; };
 		F60D6C871C5B3ADF00E4A41D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F60D6C861C5B3ADF00E4A41D /* Assets.xcassets */; };
@@ -40,7 +43,6 @@
 		F60D6D4A1C5B52BF00E4A41D /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60D6D3B1C5B52BF00E4A41D /* Alamofire.swift */; };
 		F60D6D4B1C5B52BF00E4A41D /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60D6D3C1C5B52BF00E4A41D /* Download.swift */; };
 		F60D6D4C1C5B52BF00E4A41D /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60D6D3D1C5B52BF00E4A41D /* Error.swift */; };
-		F60D6D4D1C5B52BF00E4A41D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F60D6D3E1C5B52BF00E4A41D /* Info.plist */; };
 		F60D6D4E1C5B52BF00E4A41D /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60D6D3F1C5B52BF00E4A41D /* Manager.swift */; };
 		F60D6D4F1C5B52BF00E4A41D /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60D6D401C5B52BF00E4A41D /* MultipartFormData.swift */; };
 		F60D6D501C5B52BF00E4A41D /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60D6D411C5B52BF00E4A41D /* ParameterEncoding.swift */; };
@@ -62,6 +64,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B744618E1CAB843D0052111D /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		B744618F1CAB843D0052111D /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		B74461901CAB843D0052111D /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
 		F60D6C7C1C5B3ADF00E4A41D /* AppPayDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppPayDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F60D6C7F1C5B3ADF00E4A41D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F60D6C841C5B3ADF00E4A41D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -181,11 +186,9 @@
 		F60D6D321C5B4EBA00E4A41D /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
 		F60D6D351C5B50EA00E4A41D /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		F60D6D371C5B529500E4A41D /* WXPrePay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WXPrePay.swift; sourceTree = "<group>"; };
-		F60D6D3A1C5B52BF00E4A41D /* Alamofire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alamofire.h; sourceTree = "<group>"; };
 		F60D6D3B1C5B52BF00E4A41D /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
 		F60D6D3C1C5B52BF00E4A41D /* Download.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
 		F60D6D3D1C5B52BF00E4A41D /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
-		F60D6D3E1C5B52BF00E4A41D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F60D6D3F1C5B52BF00E4A41D /* Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		F60D6D401C5B52BF00E4A41D /* MultipartFormData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipartFormData.swift; sourceTree = "<group>"; };
 		F60D6D411C5B52BF00E4A41D /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
@@ -465,11 +468,12 @@
 		F60D6D391C5B52BF00E4A41D /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
-				F60D6D3A1C5B52BF00E4A41D /* Alamofire.h */,
+				B744618E1CAB843D0052111D /* NetworkReachabilityManager.swift */,
+				B744618F1CAB843D0052111D /* Notifications.swift */,
+				B74461901CAB843D0052111D /* Timeline.swift */,
 				F60D6D3B1C5B52BF00E4A41D /* Alamofire.swift */,
 				F60D6D3C1C5B52BF00E4A41D /* Download.swift */,
 				F60D6D3D1C5B52BF00E4A41D /* Error.swift */,
-				F60D6D3E1C5B52BF00E4A41D /* Info.plist */,
 				F60D6D3F1C5B52BF00E4A41D /* Manager.swift */,
 				F60D6D401C5B52BF00E4A41D /* MultipartFormData.swift */,
 				F60D6D411C5B52BF00E4A41D /* ParameterEncoding.swift */,
@@ -546,7 +550,6 @@
 				F60D6C8A1C5B3ADF00E4A41D /* LaunchScreen.storyboard in Resources */,
 				F60D6C871C5B3ADF00E4A41D /* Assets.xcassets in Resources */,
 				F60D6D2D1C5B4DEB00E4A41D /* AlipaySDK.bundle in Resources */,
-				F60D6D4D1C5B52BF00E4A41D /* Info.plist in Resources */,
 				F60D6C851C5B3ADF00E4A41D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -560,6 +563,7 @@
 			files = (
 				F60D6D541C5B52BF00E4A41D /* Result.swift in Sources */,
 				F60D6D501C5B52BF00E4A41D /* ParameterEncoding.swift in Sources */,
+				B74461911CAB843D0052111D /* NetworkReachabilityManager.swift in Sources */,
 				F60D6D511C5B52BF00E4A41D /* Request.swift in Sources */,
 				F60D6C961C5B3C2600E4A41D /* AlipayOrder.swift in Sources */,
 				F60D6D561C5B52BF00E4A41D /* Stream.swift in Sources */,
@@ -567,6 +571,7 @@
 				F60D6C9D1C5B3DA100E4A41D /* MyConstants.swift in Sources */,
 				F60D6D011C5B3E5500E4A41D /* MD5DataSigner.m in Sources */,
 				F60D6D4E1C5B52BF00E4A41D /* Manager.swift in Sources */,
+				B74461931CAB843D0052111D /* Timeline.swift in Sources */,
 				F60D6D381C5B529500E4A41D /* WXPrePay.swift in Sources */,
 				F60D6C921C5B3B5C00E4A41D /* PaymentViewController.swift in Sources */,
 				F60D6D5C1C5B53C600E4A41D /* JSON.swift in Sources */,
@@ -581,6 +586,7 @@
 				F60D6D001C5B3E5500E4A41D /* DataVerifier.m in Sources */,
 				F60D6C9B1C5B3D2000E4A41D /* MyOrder.swift in Sources */,
 				F60D6D4B1C5B52BF00E4A41D /* Download.swift in Sources */,
+				B74461921CAB843D0052111D /* Notifications.swift in Sources */,
 				F60D6D551C5B52BF00E4A41D /* ServerTrustPolicy.swift in Sources */,
 				F60D6CFF1C5B3E5500E4A41D /* DataSigner.m in Sources */,
 				F60D6D4F1C5B52BF00E4A41D /* MultipartFormData.swift in Sources */,

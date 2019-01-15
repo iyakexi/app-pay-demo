@@ -1,6 +1,6 @@
 // MultipartFormData.swift
 //
-// Copyright (c) 2014–2015 Alamofire Software Foundation (http://alamofire.org/)
+// Copyright (c) 2014–2016 Alamofire Software Foundation (http://alamofire.org/)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -22,7 +22,7 @@
 
 import Foundation
 
-#if os(iOS) || os(watchOS)
+#if os(iOS) || os(watchOS) || os(tvOS)
 import MobileCoreServices
 #elseif os(OSX)
 import CoreServices
@@ -257,11 +257,7 @@ public class MultipartFormData {
         var isReachable = true
 
         if #available(OSX 10.10, *) {
-            if #available(iOS 8.0, *) {
-                isReachable = fileURL.checkPromisedItemIsReachableAndReturnError(nil)
-            } else {
-                // Fallback on earlier versions
-            }
+            isReachable = fileURL.checkPromisedItemIsReachableAndReturnError(nil)
         }
 
         guard isReachable else {
@@ -432,7 +428,6 @@ public class MultipartFormData {
             throw Error.errorWithCode(NSURLErrorCannotOpenFile, failureReason: failureReason)
         }
 
-        outputStream.scheduleInRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
         outputStream.open()
 
         self.bodyParts.first?.hasInitialBoundary = true
@@ -443,7 +438,6 @@ public class MultipartFormData {
         }
 
         outputStream.close()
-        outputStream.removeFromRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
     }
 
     // MARK: - Private - Body Part Encoding
@@ -480,7 +474,6 @@ public class MultipartFormData {
 
     private func encodeBodyStreamDataForBodyPart(bodyPart: BodyPart) throws -> NSData {
         let inputStream = bodyPart.bodyStream
-        inputStream.scheduleInRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
         inputStream.open()
 
         var error: NSError?
@@ -507,7 +500,6 @@ public class MultipartFormData {
         }
 
         inputStream.close()
-        inputStream.removeFromRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
 
         if let error = error {
             throw error
@@ -541,7 +533,6 @@ public class MultipartFormData {
 
     private func writeBodyStreamForBodyPart(bodyPart: BodyPart, toOutputStream outputStream: NSOutputStream) throws {
         let inputStream = bodyPart.bodyStream
-        inputStream.scheduleInRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
         inputStream.open()
 
         while inputStream.hasBytesAvailable {
@@ -567,7 +558,6 @@ public class MultipartFormData {
         }
 
         inputStream.close()
-        inputStream.removeFromRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
     }
 
     private func writeFinalBoundaryDataForBodyPart(

@@ -28,7 +28,7 @@ class PaymentViewController: UIViewController,WXApiDelegate {
         // 通常是请求服务器 API 生成订单，这里为测试方便直接将测试数据hardcode
         order = MyOrder(id: 2, title: "测试订单标题", content: "订单描述内容", url: "", createdAt: "", price: 0.01, paid: true, productID: 100);
 
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "weixinPaySuccess:", name: WXPaySuccessNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(PaymentViewController.weixinPaySuccess(_:)), name: WXPaySuccessNotification, object: nil)
     }
     
     @IBAction func alipayAction(sender: AnyObject) {
